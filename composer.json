@@ -1,0 +1,75 @@
+{
+  "name": "focela/laratrust",
+  "description": "PHP 8.0+ fully-featured authentication & authorization system",
+  "keywords": [
+    "auth",
+    "focela",
+    "laravel",
+    "php",
+    "security",
+    "trust"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Focela Technologies",
+      "email": "opensource@focela.com",
+      "homepage": "https://opensource.focela.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "focela/support": "^10.0",
+    "illuminate/support": "^10.0"
+  },
+  "require-dev": {
+    "focela/php-cs-fixer": "^3.0",
+    "illuminate/cookie": "^10.0",
+    "illuminate/database": "^10.0",
+    "illuminate/events": "^10.0",
+    "illuminate/http": "^10.0",
+    "illuminate/session": "^10.0",
+    "mockery/mockery": "^1.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "scripts": {
+    "cs:check": "@php php-cs-fixer check --verbose --diff",
+    "cs:fix": "@php php-cs-fixer fix",
+    "test": "./vendor/bin/phpunit"
+  },
+  "suggest": {
+    "illuminate/database": "By default, Laratrust utilizes the powerful Illuminate database layer.",
+    "illuminate/events": "To hook into various events across Laratrust, we recommend using Illuminate's event dispatcher.",
+    "symfony/http-foundation": "Required for native implementations."
+  },
+  "autoload": {
+    "psr-4": {
+      "Focela\\Laratrust\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Focela\\Laratrust\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "10.0.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Focela\\Laratrust\\Laravel\\LaratrustServiceProvider"
+      ],
+      "aliases": {
+        "Activation": "Focela\\Laratrust\\Laravel\\Facades\\Activation",
+        "Reminder": "Focela\\Laratrust\\Laravel\\Facades\\Reminder",
+        "Laratrust": "Focela\\Laratrust\\Laravel\\Facades\\Laratrust"
+      }
+    }
+  }
+}
