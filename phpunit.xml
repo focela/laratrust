@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2024 Focela Technologies. All rights reserved.
+  ~ Use of this source code is governed by a MIT style
+  ~ license that can be found in the LICENSE file.
+  -->
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         verbose="true"
+>
+    <testsuites>
+        <testsuite name="Laratrust Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="tap" target="./build/report.tap" showUncoveredFiles="true"/>
+        <log type="junit" target="./build/report.junit.xml" showUncoveredFiles="true"/>
+        <log type="coverage-html" target="./build/coverage" showUncoveredFiles="true"/>
+        <log type="coverage-text" target="./build/coverage.txt" showUncoveredFiles="true"/>
+        <log type="coverage-clover" target="./build/logs/clover.xml" showUncoveredFiles="true"/>
+    </logging>
+</phpunit>
