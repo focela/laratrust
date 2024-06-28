@@ -30,7 +30,7 @@
     "illuminate/http": "^10.0",
     "illuminate/session": "^10.0",
     "mockery/mockery": "^1.0",
-    "phpunit/phpunit": "^9.0"
+    "phpunit/phpunit": "^10.5"
   },
   "scripts": {
     "cs:check": "@php php-cs-fixer check --verbose --diff",
