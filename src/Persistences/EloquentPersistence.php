@@ -9,10 +9,13 @@ namespace Focela\Laratrust\Persistences;
 
 use Illuminate\Database\Eloquent\Model;
 use Focela\Laratrust\Users\EloquentUser;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class EloquentPersistence extends Model implements PersistenceInterface
 {
+    use HasUuids;
+
     /**
      * The Users model FQCN.
      *

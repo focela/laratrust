@@ -10,13 +10,14 @@ namespace Focela\Laratrust\Roles;
 use Illuminate\Database\Eloquent\Model;
 use Focela\Laratrust\Users\EloquentUser;
 use Focela\Laratrust\Permissions\PermissibleTrait;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Focela\Laratrust\Permissions\PermissibleInterface;
 use Focela\Laratrust\Permissions\PermissionsInterface;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class EloquentRole extends Model implements PermissibleInterface, RoleInterface
 {
-    use PermissibleTrait;
+    use HasUuids, PermissibleTrait;
 
     /**
      * The Users model FQCN.

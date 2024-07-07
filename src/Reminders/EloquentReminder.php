@@ -8,9 +8,12 @@
 namespace Focela\Laratrust\Reminders;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class EloquentReminder extends Model
 {
+    use HasUuids;
+
     /**
      * The table associated with the model.
      *

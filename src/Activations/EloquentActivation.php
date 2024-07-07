@@ -8,9 +8,12 @@
 namespace Focela\Laratrust\Activations;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class EloquentActivation extends Model implements ActivationInterface
 {
+    use HasUuids;
+
     /**
      * The table associated with the model.
      *
