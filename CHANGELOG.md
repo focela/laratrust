@@ -4,10 +4,14 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v10.0.1 (08 Jul 2024)
+
+Features:
+* Integrate UUID for primary key.
+
 ## v10.0.0 (03 Jul 2024)
 
 Features:
-
 * Authentication.
 * Authorization.
 * Registration.
@@ -18,4 +22,3 @@ Features:
 * Roles and role permissions.
 * Remember me.
 * Interface driven. (your own implementations at will)
-
