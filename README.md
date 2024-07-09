@@ -55,7 +55,7 @@ In the `$aliases` array add the following facades for this package.
 ```php
 'Activation' => Focela\Laratrust\Laravel\Facades\Activation::class,
 'Reminder'   => Focela\Laratrust\Laravel\Facades\Reminder::class,
-'Laratrust'   => Focela\Laratrust\Laravel\Facades\Laratrust::class,
+'Laratrust'  => Focela\Laratrust\Laravel\Facades\Laratrust::class,
 ```
 
 ### Assets
